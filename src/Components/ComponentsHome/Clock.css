@@ -1,0 +1,153 @@
+.timer-container {
+  display: block;
+  font-family: Georgia, sans-serif,'Times New Roman',  'PT Sans','Times';
+}
+
+.clock {
+  position: relative;
+  padding:2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #051817, #0e3839);
+  
+  width: 75%;
+  left: 12.5%;
+  font-size: 2rem;
+  color: #06f1f6;
+  text-shadow: 1px 1px 5px;
+  border-radius: 15px;
+  border: 3px solid silver;
+  box-shadow: 0 0 10px 10px;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.clock section {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  font-size: 0.8rem;
+}
+.clock section p {
+  font-size: 1.8rem;
+}
+.clock section small {
+  color: silver;
+  text-shadow: none;
+}
+
+.top-h {
+  font-size:1.5rem ;
+  font-family:monospace;
+  margin-left: 12.5%;
+  margin-bottom: 10px;
+}
+
+
+
+
+.contain-btn {
+  display: block;
+  text-align:center;
+  
+  
+}
+.btn-buy {
+  padding: 7px;
+  background-color: rgb(131, 131, 131);
+  border: 3px solid rgb(0, 0, 0);
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  width: 7rem;
+}
+.btn-chart {
+  border-radius: 5px;
+  background-color: rgb(131, 131, 131);
+  border: 3px solid rgb(0, 0, 0);
+  margin-top: 1.5rem;
+  padding: 7px;
+  width: 7rem;
+
+  margin-left: 10%;
+  
+}
+.btn-chart:hover {
+  background-color: #00000000;
+  
+
+}
+
+.btn-buy:hover {
+  background-color: #00000000;
+  
+
+}
+
+/*for tablet*/
+@media screen and (min-width: 768px) {
+  .clock {
+    height: 20%;
+  }
+  .clock section {
+    font-size: 2rem;
+  }
+  .clock section p {
+    font-size: 3rem;
+  }
+
+  .top-h {
+    font-size:1.5rem ;
+  }
+
+  .btn-buy {
+    font-size: x-large;
+    padding: 7px;
+    width: 10rem;
+    
+  }
+  .btn-chart{
+    font-size: x-large;
+    width: 10rem;
+    margin-left: 15%;
+  }
+
+
+
+
+}
+
+/*for desctop */
+@media screen and (min-width: 960px) {
+  .clock {
+    height: 20%;
+    width: 40%;
+    left: 30%;
+    font-size: 2rem;
+
+    
+  }
+
+
+
+  .top-h {
+    font-size:2rem ;
+    margin-left: 30%;
+  }
+
+  .btn-buy {
+    font-size: x-large;
+    padding: 7px;
+    width: 10rem;
+    
+  }
+  .btn-chart{
+    font-size: x-large;
+    width: 10rem;
+    margin-left: 4%;
+  }
+
+}
