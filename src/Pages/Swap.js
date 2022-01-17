@@ -1,6 +1,6 @@
 import React from "react";
 import Connect from "../Components/ComponentSwap/Connect";
-import From from "../Components/ComponentSwap/From";
+
 import './Swap.css'
 const Swap = () => {
   return (

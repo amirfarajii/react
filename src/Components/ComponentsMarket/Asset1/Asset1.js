@@ -1,6 +1,8 @@
 import React, { Suspense, useState } from "react";
+import { Link } from "react-router-dom";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
+
 import "./../Asset.css";
 
 import Model from "./Gun1";
@@ -27,7 +29,7 @@ function MyAnimatedModel() {
   return (
     <mesh
       ref={myMesh}
-      scale={(viewport.width / 30) * (active ? 1.5 : 1)}
+      scale={(viewport.width / 32) * (active ? 1.5 : 1)}
       onClick={(e) => setActive(!active)}
     >
       <Model />
@@ -35,17 +37,16 @@ function MyAnimatedModel() {
   );
 }
 
-export default function Aseet1() {
+export default function Asset1() {
   const [width, setWidth] = useState(window.innerWidth);
   window.addEventListener("resize", () => {
     setWidth(window.innerWidth);
   });
 
   return (
-    <div className="container-asset">
-      <div className="angle-right"><i class="fas fa-angle-right"></i></div>
+    <div className="asset">
       <Canvas
-        style={{ width: width, height: "100vh" }}
+        style={{ width: width, height: "90vh" }}
         camera={{ position: [2, 0, 0] }}
       >
         <Suspense fallback={<Loader />}>

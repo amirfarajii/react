@@ -52,7 +52,10 @@ const ConnectTo = () => {
         chainIdHandler();
       });
     } else {
-      console.log("Please install MetaMask!");
+      alert("Please install MetaMask!");
+      return(
+        <h1>Please Install MetaMask!</h1>
+      )
     }
   };
   if (!account.connected) {

@@ -1,7 +1,8 @@
 import React, { Suspense, useState } from "react";
+import {Link} from "react-router-dom";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import "./Asset.css";
+import "./../Asset.css";
 
 import Model from "./Gun2";
 import { Html, useProgress } from "@react-three/drei";
@@ -27,7 +28,7 @@ function MyAnimatedModel() {
   return (
     <mesh
       ref={myMesh}
-      scale={(viewport.width/ 500) * (active ? 1.5 : 1)}
+      scale={(viewport.width / 600) * (active ? 1.5 : 1)}
       onClick={(e) => setActive(!active)}
     >
       <Model />
@@ -35,16 +36,17 @@ function MyAnimatedModel() {
   );
 }
 
-export default function Aseet2() {
+export default function Asset2() {
   const [width, setWidth] = useState(window.innerWidth);
   window.addEventListener("resize", () => {
     setWidth(window.innerWidth);
   });
 
   return (
-    <div className="contain-asset">
+    <div className="asset">
+
       <Canvas
-        style={{ width: width, height: "98vh" }}
+        style={{ width: width, height: "90vh" }}
         camera={{ position: [2, 0, 0] }}
       >
         <Suspense fallback={<Loader />}>
@@ -55,9 +57,6 @@ export default function Aseet2() {
           <Environment preset="sunset" />
         </Suspense>
       </Canvas>
-      <div>
-        <button className="btn">sdfvcx</button>
-      </div>
     </div>
   );
 }
